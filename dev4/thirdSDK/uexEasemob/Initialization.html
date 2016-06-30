@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../../../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../../../css/ui-box.css">
+        <link rel="stylesheet" href="../../../css/ui-base.css">
+        <link rel="stylesheet" href="../../../css/ui-color.css">
+        <link rel="stylesheet" href="../../../css/appcan.icon.css">
+        <link rel="stylesheet" href="../../../css/appcan.control.css">
+        <link rel="stylesheet" href="../../../css/new.css">
+        <link rel="stylesheet" href="../../../css/my.css">
+        <style>
+            input {
+                color: black;
+                padding: 1px 6px;
+                margin-left: 8px;
+            }
+            input[type="text"] {
+                padding: .2em .2em;
+                margin: .2em .2em;
+                font-size: 1em;
+            }
+            input[type="button"] {
+                padding: .2em .2em;
+                margin: .2em .2em;
+                font-size: 1em;
+            }
+            span {
+                color: #000000;
+                margin: 0.5em 0 0.5em 0.5em;
+                display: inline-block;
+            }
+            #height{margin-top: 0.8em;}
+        </style>
+    </head>
+    <body class="um-vp " style="background-color: #FFFFFF" ontouchstart>
+        <!-- <div id="page_0" class="up ub ub-ver bc-bg" tabindex="0"> -->
+            <!--header开始-->
+            <div id="header" class="uh bc-text-head ub bc-head">
+                <div class="nav-btn" id="nav-left" onclick="closeWin();">
+                    <div class="fa fa-angle-left fa-2x"></div>
+                    <div class="text">
+                        返回
+                    </div>
+                </div>
+                <h1 class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">Initialization</h1>
+                <div class="nav-btn nav-bt" id="nav-right"></div>
+            </div>
+            <!--header结束--><!--content开始-->
+            <div id="content" class="ub-f1 tx-l t-bla">
+                <div class="conbor">
+                    <div class="consj" id="topDiv" style="color:black;">
+                        <span class="first">appKey:</span>
+                        <div class="c-wh  ubt ubb bc-border uinput ub ub-f1">
+                            <input type="text"  class="ub-f1 font-c" id="initEasemobappKey" value="easemob-demo#chatdemoui" >
+                        </div>
+                        <span class="first">apnsCertName:</span>
+                        <div class="c-wh  ubt ubb bc-border uinput ub ub-f1">
+                            <input type="text"  class="ub-f1 font-c" id="initEasemobapnsCertName" value="chatdemoui">
+                        </div>
+                        <span class="first">isAutoLoginEnabled:</span>
+                        <div class="c-wh  ubt ubb bc-border uinput ub ub-f1">
+                            <input type="text"  class="ub-f1 font-c" id="initEasemobisAutoLoginEnabled" value="1">
+                        </div>
+                        <span class="first">isAutoAcceptGroupInvitation 3.0.22新增参数:</span>
+                        <div class="c-wh  ubt ubb bc-border uinput ub ub-f1">
+                            <input type="text"  class="ub-f1 font-c" id="isAutoAcceptGroupInvitation" value="2">
+                        </div>
+                        <div class="ub ub-hor ub-pc" id="height">
+                            <div class="uin  ub-f1 ">
+                                <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="initEasemob();">
+                                    initEasemob
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="consj" id="topDiv" style="color:black;">
+                        <span class="first">username:</span>
+                        <div class="c-wh  ubt ubb bc-border uinput ub ub-f1">
+                            <input type="text"  class="ub-f1 font-c" id="loginusername" value="mikuser1" >
+                        </div>
+                        <span class="first">password:</span>
+                        <div class="c-wh  ubt ubb bc-border uinput ub ub-f1">
+                            <input type="text"  class="ub-f1 font-c" id="loginpassword" value="123456">
+                        </div>
+                        <div class="ub ub-hor ub-pc" id="height">
+                            <div class="uin  ub-f1 ">
+                                <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="login();">
+                                    login
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="consj" id="topDiv" style="color:black;">
+                        <div class="ub ub-hor ub-pc" id="height">
+                            <div class="uin  ub-f1 ">
+                                <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="logout();">
+                                    logout
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="consj" id="topDiv" style="color:black;">
+                        <span class="first">username:</span>
+                        <div class="c-wh  ubt ubb bc-border uinput ub ub-f1">
+                            <input type="text"  class="ub-f1 font-c" id="registerUserusername" value="" >
+                        </div>
+                        <span class="first">password:</span>
+                        <div class="c-wh  ubt ubb bc-border uinput ub ub-f1">
+                            <input type="text"  class="ub-f1 font-c" id="registerUserpassword" value="">
+                        </div>
+                        <div class="ub ub-hor ub-pc" id="height">
+                            <div class="uin  ub-f1 ">
+                                <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="registerUser();">
+                                    registerUser
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="consj" id="topDiv" style="color:black;">
+                        <span class="first">nickname:</span>
+                        <div class="c-wh  ubt ubb bc-border uinput ub ub-f1">
+                            <input type="text"  class="ub-f1 font-c" id="updateCurrentUserNicknamenickname" value="">
+                        </div>
+                        <div class="ub ub-hor ub-pc" id="height">
+                            <div class="uin  ub-f1 ">
+                                <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="updateCurrentUserNickname();">
+                                    updateCurrentUserNickname
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="consj" id="topDiv" style="color:black;">
+                        <span id="">
+                            仅iOS可用:
+                        </span>
+                        <div class="ub ub-hor ub-pc" id="height">
+                            <div class="uin  ub-f1 ">
+                                <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="getLoginInfo();">
+                                    getLoginInfo
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            <!-- </div> -->
+            <!--content结束-->
+        </div>
+        <script src="../../../js/appcan.js"></script>
+        <script src="../../../js/appcan.control.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            uexWindow.subscribeChannelNotification("1", "easemobDemoGlobalPost");
+            uexWindow.easemobDemoGlobalPost=globalPost;
+        });
+        
+    //[1.1]
+    function initEasemob(){
+        var appKey = document.getElementById("initEasemobappKey").value;
+        var apnsCertName = document.getElementById("initEasemobapnsCertName").value;
+        var isAutoLoginEnabled = document.getElementById("initEasemobisAutoLoginEnabled").value;
+        var isAutoAcceptGroupInvitation = document.getElementById("isAutoAcceptGroupInvitation").value;
+        uexEasemob.initEasemob('{"appKey":"'+appKey+'","apnsCertName":"'+apnsCertName+'","isAutoLoginEnabled":"'+isAutoLoginEnabled+'","isAutoAcceptGroupInvitation":"'+isAutoAcceptGroupInvitation+'"}',function(data){
+                               alert("callback:"+data);
+                               });
+        
+    }
+    
+    //[1.2]
+    function login(){
+        //alert(1);
+        var username = document.getElementById("loginusername").value;
+        var password = document.getElementById("loginpassword").value;
+        uexEasemob.login('{"username":"'+username+'","password":"'+password+'"}',function(data){
+                         alert("callback:"+JSON.stringify(data));
+                         });
+    }
+    
+    //[1.4]
+    function logout(){
+        uexEasemob.logout('',function(data){
+                          alert("callback:"+JSON.stringify(data));
+                          });
+    }
+    
+    //[1.5]
+    function registerUser(){
+        var username = document.getElementById("registerUserusername").value;
+        var password = document.getElementById("registerUserpassword").value;
+        uexEasemob.registerUser('{"username":"'+username+'","password":"'+password+'"}',function(data){
+                                alert("callback:"+JSON.stringify(data));
+                                });
+    }
+    
+    //[1.7]
+    function updateCurrentUserNickname(){
+        var nickname = document.getElementById("updateCurrentUserNicknamenickname").value;
+        uexEasemob.updateCurrentUserNickname('{"nickname":"'+nickname+'"}');
+        alert("已经执行updateCurrentUserNickname方法");
+    }
+    
+    //[1.8]
+    function getLoginInfo(){
+        uexEasemob.getLoginInfo('',function(data){
+                                alert("callback:"+JSON.stringify(data));
+                                });
+    }   
+
+
+    function close(){
+        //
+        uexWindow.close(-1);
+    }
+    </script>
+</html>

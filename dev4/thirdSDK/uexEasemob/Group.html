@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../../../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../../../css/ui-box.css">
+        <link rel="stylesheet" href="../../../css/ui-base.css">
+        <link rel="stylesheet" href="../../../css/ui-color.css">
+        <link rel="stylesheet" href="../../../css/appcan.icon.css">
+        <link rel="stylesheet" href="../../../css/appcan.control.css">
+        <link rel="stylesheet" href="../../../css/new.css">
+        <link rel="stylesheet" href="../../../css/my.css">
+        <style>
+            input {
+                color: black;
+                padding: 1px 6px;
+                margin-left: 8px;
+            }
+            input[type="text"] {
+                padding: .2em .2em;
+                margin: .2em .2em;
+                font-size: 1em;
+            }
+            input[type="button"] {
+                padding: .2em .2em;
+                margin: .2em .2em;
+                font-size: 1em;
+            }
+            span {
+                color: #000000;
+                margin: 0.5em 0 0.5em 0.5em;
+                display: inline-block;
+            }
+            #height {
+                margin-top: 0.8em;
+            }
+            .textbox {
+                display: block;
+                width: 85%;
+                color: #999;
+                padding: 1.5% 1%;
+                font-size:1.3em;
+                -webkit-appearance: none;
+                border:1px solid #f6f6f6
+            }
+            .pad{
+                padding-left: 0.5em;
+            }
+        </style>
+    </head>
+    <body class="um-vp " style="background-color: #FFFFFF" ontouchstart>
+        <!-- <div id="page_0" class="up ub ub-ver bc-bg" tabindex="0"> -->
+        <!--header开始-->
+        <div id="header" class="uh bc-text-head ub bc-head">
+            <div class="nav-btn" id="nav-left" onclick="closeWin();">
+                <div class="fa fa-angle-left fa-2x"></div>
+                <div class="text">
+                    返回
+                </div>
+            </div>
+            <h1 class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">Group</h1>
+            <div class="nav-btn nav-bt" id="nav-right"></div>
+        </div>
+        <!--header结束--><!--content开始-->
+        <div id="content" class="ub-f1 tx-l t-bla">
+            <div class="conbor">
+            <span>方法：createPrivateGroup</span>
+             <div class="pad">groupName:</div><input class="textbox" type="text" id="createPrivateGroupgroupName" value="testPrivateGroup"></input>
+             <div class="pad">desc:</div><input class="textbox" type="text" id="createPrivateGroupdesc" value="uexEasemobPrivateGroupTest"></input>
+             <div class="pad">members:</div><input class="textbox" type="text" id="createPrivateGroupmembers" value='["mikuser2"]'></input>
+             <div class="pad">allowInvite:</div><input class="textbox" type="text" id="createPrivateGroupallowInvite" value="1"></input>
+             <div class="pad">maxUsers:</div><input class="textbox" type="text" id="createPrivateGroupmaxUsers" value="20"></input>
+             <div class="pad">initialWelcomeMessage:</div><input class="textbox" type="text" id="createPrivateGroupinitialWelcomeMessage" value="Welcome to a Private Group!"></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="createPrivateGroup();">
+                            createPrivateGroup
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法： createPublicGroup</span>
+             <div class="pad">groupName:</div><input class="textbox" type="text" id="createPublicGroupgroupName" value="testPublicGroup222"></input>
+             <div class="pad">desc:</div><input class="textbox" type="text" id="createPublicGroupdesc" value="uexEasemobPublicGroupTest"></input>
+             <div class="pad">members:</div><input class="textbox" type="text" id="createPublicGroupmembers" value='["mikuser2"]'></input>
+             <div class="pad">needApprovalRequired:</div><input class="textbox" type="text" id="createPublicGroupneedApprovalRequired" value="1"></input>
+             <div class="pad">maxUsers:</div><input class="textbox" type="text" id="createPublicGroupmaxUsers" value="30"></input>
+             <div class="pad">initialWelcomeMessage:</div><input class="textbox" type="text" id="createPublicGroupinitialWelcomeMessage" value="A Public Group!"></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="createPublicGroup();">
+                            createPublicGroup
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：addUsersToGroup</span>
+             <div class="pad">isGroupOwner:</div><input class="textbox" type="text" id="addUsersToGroupisGroupOwner" value=""></input>
+             <div class="pad">groupId:</div><input class="textbox" type="text" id="addUsersToGroupgroupId" value="1461216725947"></input>
+             <div class="pad">newmembers:</div><input class="textbox" type="text" id="addUsersToGroupnewmembers" value='["mikuser2"]'></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="addUsersToGroup();">
+                            addUsersToGroup
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：removeUserFromGroup</span>
+             <div class="pad">groupId:</div><input class="textbox" type="text" id="removeUserFromGroupgroupId" value="1461216725947"></input>
+             <div class="pad">username:</div><input class="textbox" type="text" id="removeUserFromGroupusername" value="mikuser2"></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="removeUserFromGroup();">
+                            removeUserFromGroup
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：joinGroup</span>
+             <div class="pad">groupId:</div><input class="textbox" type="text" id="joinGroupgroupId" value="1461216725947"></input>
+             <div class="pad">reason:</div><input class="textbox" type="text" id="joinGroupreason" value=""></input>
+             <div class="pad">groupName:</div><input class="textbox" type="text" id="joinGroupgroupName" value=""></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="joinGroup();">
+                            joinGroup
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：exitFromGroup</span>
+             <div class="pad">groupId:</div><input class="textbox" type="text" id="exitFromGroupgroupId" value="1461216725947"></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="exitFromGroup();">
+                            exitFromGroup
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：exitAndDeleteGroup</span>
+             <div class="pad">groupId:</div><input class="textbox" type="text" id="exitAndDeleteGroupgroupId" value="1461216725947"></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="exitAndDeleteGroup();">
+                            exitAndDeleteGroup
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：getGroupsFromServer</span>
+             <div class="pad">loadCache:</div><input class="textbox" type="text" id="getGroupsFromServerloadCache" value=""></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="getGroupsFromServer();">
+                            getGroupsFromServer
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：getAllPublicGroupsFromServer</span>
+             <div class="pad">pageSize:</div><input class="textbox" type="text" id="getAllPublicGroupsFromServerpageSize" value=""></input>
+             <div class="pad">cursor:</div><input class="textbox" type="text" id="getAllPublicGroupsFromServercursor" value=""></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="getGroupsFromServer();">
+                            getGroupsFromServer
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：getGroup</span>
+             <div class="pad">groupId:</div><input class="textbox" type="text" id="getGroupgroupId" value="1461216725947"></input>
+             <div class="pad">loadCache:</div><input class="textbox" type="text" id="getGrouploadCache" value=""></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="getGroup();">
+                            getGroup
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：blockGroupMessage</span>
+             <div class="pad">groupId:</div><input class="textbox" type="text" id="blockGroupMessagegroupId" value="1461216725947"></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="blockGroupMessage();">
+                            blockGroupMessage
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：unblockGroupMessage</span>
+             <div class="pad">groupId:</div><input class="textbox" type="text" id="unblockGroupMessagegroupId" value="1461216725947"></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="unblockGroupMessage();">
+                            unblockGroupMessage
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：changeGroupName</span>
+             <div class="pad">groupId:</div><input class="textbox" type="text" id="changeGroupNamegroupId" value="1461216725947"></input>
+             <div class="pad">changedGroupName:</div><input class="textbox" type="text" id="changeGroupNamechangedGroupName" value=""></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="changeGroupName();">
+                            changeGroupName
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：setReceiveNotNoifyGroup</span>
+             <div class="pad">groupIds:</div><input class="textbox" type="text" id="setReceiveNotNoifyGroupgroupIds" value=""></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="setReceiveNotNoifyGroup();">
+                            setReceiveNotNoifyGroup
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：blockUser</span>
+             <div class="pad">groupId:</div><input class="textbox" type="text" id="blockUsergroupId" value="1461216725947"></input>
+             <div class="pad">username:</div><input class="textbox" type="text" id="blockUserusername" value="mikuser2"></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="blockUser();">
+                            blockUser
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：unblockUser</span>
+             <div class="pad">groupId:</div><input class="textbox" type="text" id="unblockUsergroupId" value="1461216725947"></input>
+             <div class="pad">username:</div><input class="textbox" type="text" id="unblockUserusername" value="mikuser2"></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="unblockUser();">
+                            unblockUser
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：getBlockedUsers</span>
+             <div class="pad">groupId:</div><input class="textbox" type="text" id="getBlockedUsersgroupId" value="1467096561067"></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="getBlockedUsers();">
+                            getBlockedUsers
+                        </div>
+                    </div>
+                </div>
+
+
+             <br><br><span>方法：acceptJoinApplication 3.0.22新增接口</span>
+             <div class="pad">groupId:</div><input class="textbox" type="text" id="acceptJoinApplication_groupId" value=""></input>
+             <div class="pad">username:</div><input class="textbox" type="text" id="acceptJoinApplication_username" value="mikuser2"></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="acceptJoinApplication();">
+                            acceptJoinApplication
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：declineJoinApplication 3.0.22新增接口</span>
+             <div class="pad">groupId:</div><input class="textbox" type="text" id="declineJoinApplication_groupId" value=""></input>
+             <div class="pad">username:</div><input class="textbox" type="text" id="declineJoinApplication_username" value="mikuser2"></input>
+             <div class="pad">reason:</div><input class="textbox" type="text" id="declineJoinApplication_reason" value=""></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="declineJoinApplication();">
+                            declineJoinApplication
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：acceptInvitationFromGroup 3.0.22新增接口</span>
+             <div class="pad">groupId:</div><input class="textbox" type="text" id="acceptInvitationFromGroup_groupId" value="1461907230765"></input>
+             <div class="pad">username:</div><input class="textbox" type="text" id="acceptInvitationFromGroup_username" value="mikuser2"></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="acceptInvitationFromGroup();">
+                            acceptInvitationFromGroup
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：declineInvitationFromGroup 3.0.22新增接口</span>
+             <div class="pad">groupId:</div><input class="textbox" type="text" id="declineInvitationFromGroup_groupId" value="1461907230765"></input>
+             <div class="pad">username:</div><input class="textbox" type="text" id="declineInvitationFromGroup_username" value="mikuser2"></input>
+             <div class="pad">reason:</div><input class="textbox" type="text" id="declineInvitationFromGroup_reason" value=""></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="acceptInvitationFromGroup();">
+                            acceptInvitationFromGroup
+                        </div>
+                    </div>
+                </div>
+
+        <div class="pad">======回调区域==========</div>
+        <div id='TestCallBack'>原本内容</div>
+        <div id='TestData'>原本内容</div>
+        <div class="pad">======回调区域==========</div>
+
+            </div>
+            <!-- </div> -->
+            <!--content结束-->
+        </div>
+        <script src="../../../js/appcan.js"></script>
+        <script src="../../../js/appcan.control.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+              uexWindow.subscribeChannelNotification("1", "easemobDemoGlobalPost");
+            uexWindow.easemobDemoGlobalPost=globalPost;
+        });
+ 
+//[5.7]
+function createPrivateGroup(){
+    var groupName = document.getElementById("createPrivateGroupgroupName").value;
+    var desc = document.getElementById("createPrivateGroupdesc").value;
+    var members = document.getElementById("createPrivateGroupmembers").value;
+    var allowInvite = document.getElementById("createPrivateGroupallowInvite").value;
+    var maxUsers = document.getElementById("createPrivateGroupmaxUsers").value;
+    var initialWelcomeMessage = document.getElementById("createPrivateGroupinitialWelcomeMessage").value;
+    uexEasemob.createPrivateGroup('{"groupName":"'+groupName+'","desc":"'+desc+'","members":'+members+',"allowInvite":"'+allowInvite+'","maxUsers":"'+maxUsers+'","initialWelcomeMessage":"'+initialWelcomeMessage+'"}');
+}
+
+    //[5.8]
+    function createPublicGroup(){
+        var groupName = document.getElementById("createPublicGroupgroupName").value;
+        var desc = document.getElementById("createPublicGroupdesc").value;
+        var members = document.getElementById("createPublicGroupmembers").value;
+        var needApprovalRequired = document.getElementById("createPublicGroupneedApprovalRequired").value;
+        var maxUsers = document.getElementById("createPublicGroupmaxUsers").value;
+        var initialWelcomeMessage = document.getElementById("createPublicGroupinitialWelcomeMessage").value;
+        uexEasemob.createPublicGroup('{"groupName":"'+groupName+'","desc":"'+desc+'","members":'+members+',"needApprovalRequired":"'+needApprovalRequired+'","maxUsers":"'+maxUsers+'","initialWelcomeMessage":"'+initialWelcomeMessage+'"}');
+    }
+
+    //[5.9]
+    function addUsersToGroup(){
+        var isGroupOwner = document.getElementById("addUsersToGroupisGroupOwner").value;
+        var groupId = document.getElementById("addUsersToGroupgroupId").value;
+        var newmembers = document.getElementById("addUsersToGroupnewmembers").value;
+        uexEasemob.addUsersToGroup('{"isGroupOwner":"'+isGroupOwner+'","groupId":"'+groupId+'","newmembers":'+newmembers+'}');
+    }
+
+    //[5.10]
+    function removeUserFromGroup(){
+        var groupId = document.getElementById("removeUserFromGroupgroupId").value;
+        var username = document.getElementById("removeUserFromGroupusername").value;
+        uexEasemob.removeUserFromGroup('{"groupId":"'+groupId+'","username":"'+username+'"}');
+    }
+
+    //[5.11]
+    function joinGroup(){
+        var groupId = document.getElementById("joinGroupgroupId").value;
+        var reason = document.getElementById("joinGroupreason").value;
+        var groupName = document.getElementById("joinGroupgroupName").value;
+        uexEasemob.joinGroup('{"groupId":"'+groupId+'","reason":"'+reason+'","groupName":"'+groupName+'"}');
+    }
+
+    //[5.12]
+    function exitFromGroup(){
+        var groupId = document.getElementById("exitFromGroupgroupId").value;
+        uexEasemob.exitFromGroup('{"groupId":"'+groupId+'"}');
+    }
+
+    //[5.13]
+    function exitAndDeleteGroup(){
+        var groupId = document.getElementById("exitAndDeleteGroupgroupId").value;
+        uexEasemob.exitAndDeleteGroup('{"groupId":"'+groupId+'"}');
+    }
+
+    //[5.14]
+    function getGroupsFromServer(){
+        var loadCache = document.getElementById("getGroupsFromServerloadCache").value;
+        uexEasemob.getGroupsFromServer('{"loadCache":"'+loadCache+'"}',function(data){
+                                       alert("callback:"+JSON.stringify(data));
+                                       });
+    }
+
+    //[5.16]
+    function getAllPublicGroupsFromServer(){
+        var pageSize = document.getElementById("getAllPublicGroupsFromServerpageSize").value;
+        var cursor = document.getElementById("getAllPublicGroupsFromServercursor").value;
+        uexEasemob.getAllPublicGroupsFromServer('{"pageSize":"'+pageSize+'","cursor":"'+cursor+'"}',function(data){
+                                                alert("callback:"+JSON.stringify(data));
+                                                });
+    }
+
+    //[5.18]
+    function getGroup(){
+        var groupId = document.getElementById("getGroupgroupId").value;
+        var loadCache = document.getElementById("getGrouploadCache").value;
+        uexEasemob.getGroup('{"groupId":"'+groupId+'","loadCache":"'+loadCache+'"}',function(data){
+                            alert("callback:"+JSON.stringify(data));
+                            });
+    }
+
+    //[5.20]
+    function blockGroupMessage(){
+        var groupId = document.getElementById("blockGroupMessagegroupId").value;
+        uexEasemob.blockGroupMessage('{"groupId":"'+groupId+'"}');
+    }
+
+    //[5.21]
+    function unblockGroupMessage(){
+        var groupId = document.getElementById("unblockGroupMessagegroupId").value;
+        uexEasemob.unblockGroupMessage('{"groupId":"'+groupId+'"}');
+    }
+
+    //[5.22]
+    function changeGroupName(){
+        var groupId = document.getElementById("changeGroupNamegroupId").value;
+        var changedGroupName = document.getElementById("changeGroupNamechangedGroupName").value;
+        uexEasemob.changeGroupName('{"groupId":"'+groupId+'","changedGroupName":"'+changedGroupName+'"}');
+    }
+
+    //[5.23]
+    function setReceiveNotNoifyGroup(){
+        var groupIds = document.getElementById("setReceiveNotNoifyGroupgroupIds").value;
+        uexEasemob.setReceiveNotNoifyGroup('{"groupIds":"'+groupIds+'"}');
+    }
+
+    //[5.24]
+    function blockUser(){
+        var groupId = document.getElementById("blockUsergroupId").value;
+        var username = document.getElementById("blockUserusername").value;
+        uexEasemob.blockUser('{"groupId":"'+groupId+'","username":"'+username+'"}');
+    }
+
+    //[5.25]
+    function unblockUser(){
+        var groupId = document.getElementById("unblockUsergroupId").value;
+        var username = document.getElementById("unblockUserusername").value;
+        uexEasemob.unblockUser('{"groupId":"'+groupId+'","username":"'+username+'"}');
+    }
+
+    //[5.26]
+    function getBlockedUsers(){
+        var groupId = document.getElementById("getBlockedUsersgroupId").value;
+        uexEasemob.getBlockedUsers('{"groupId":"'+groupId+'"}',function(data){
+                                   alert("callback:"+JSON.stringify(data));
+                                   });
+    }
+
+    function acceptJoinApplication(){
+        var params={
+            groupId:document.getElementById("acceptJoinApplication_groupId").value,
+            username:document.getElementById("acceptJoinApplication_username").value
+        }
+        uexEasemob.acceptJoinApplication(JSON.stringify(params));
+    }
+    function declineJoinApplication(){
+        var params={
+            groupId:document.getElementById("declineJoinApplication_groupId").value,
+            username:document.getElementById("declineJoinApplication_username").value,
+            reason:document.getElementById("declineJoinApplication_reason").value,
+        }
+        uexEasemob.declineJoinApplication(JSON.stringify(params));
+    }
+    function acceptInvitationFromGroup(){
+        var params={
+            groupId:document.getElementById("acceptInvitationFromGroup_groupId").value,
+            username:document.getElementById("acceptInvitationFromGroup_username").value
+        }
+        uexEasemob.acceptInvitationFromGroup(JSON.stringify(params));
+    }
+    function declineInvitationFromGroup(){
+        var params={
+            groupId:document.getElementById("declineInvitationFromGroup_groupId").value,
+            username:document.getElementById("declineInvitationFromGroup_username").value,
+            reason:document.getElementById("declineInvitationFromGroup_reason").value,
+        }
+        uexEasemob.declineInvitationFromGroup(JSON.stringify(params));
+    }
+
+
+    </script>
+</html>

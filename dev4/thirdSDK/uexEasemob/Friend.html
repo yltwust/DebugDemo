@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="../../../css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="../../../css/ui-box.css">
+        <link rel="stylesheet" href="../../../css/ui-base.css">
+        <link rel="stylesheet" href="../../../css/ui-color.css">
+        <link rel="stylesheet" href="../../../css/appcan.icon.css">
+        <link rel="stylesheet" href="../../../css/appcan.control.css">
+        <link rel="stylesheet" href="../../../css/new.css">
+        <link rel="stylesheet" href="../../../css/my.css">
+        <style>
+            input {
+                color: black;
+                padding: 1px 6px;
+                margin-left: 8px;
+            }
+            input[type="text"] {
+                padding: .2em .2em;
+                margin: .2em .2em;
+                font-size: 1em;
+            }
+            input[type="button"] {
+                padding: .2em .2em;
+                margin: .2em .2em;
+                font-size: 1em;
+            }
+            span {
+                color: #000000;
+                margin: 0.5em 0 0.5em 0.5em;
+                display: inline-block;
+            }
+            #height {
+                margin-top: 0.8em;
+            }
+            .textbox {
+                display: block;
+                width: 85%;
+                color: #999;
+                padding: 1.5% 1%;
+                font-size:1.3em;
+                -webkit-appearance: none;
+                border:1px solid #f6f6f6
+            }
+            .pad{
+                padding-left: 0.5em;
+            }
+            
+        </style>
+    </head>
+    <body class="um-vp " style="background-color: #FFFFFF" ontouchstart>
+        <!-- <div id="page_0" class="up ub ub-ver bc-bg" tabindex="0"> -->
+        <!--header开始-->
+        <div id="header" class="uh bc-text-head ub bc-head">
+            <div class="nav-btn" id="nav-left" onclick="closeWin();">
+                <div class="fa fa-angle-left fa-2x"></div>
+                <div class="text">
+                    返回
+                </div>
+            </div>
+            <h1 class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">Friend</h1>
+            <div class="nav-btn nav-bt" id="nav-right"></div>
+        </div>
+        <!--header结束--><!--content开始-->
+        <div id="content" class="ub-f1 tx-l t-bla">
+            <div class="conbor">
+              <span>方法：getContactUserNames</span>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="getConversationByName();">
+                            getConversationByName
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：addContact</span>
+             <div class="pad">toAddUsername:</div><input class="textbox" type="text" id="addContacttoAddUsername" value="mikuser2"></input>
+             <div class="pad">reason:</div><input class="textbox" type="text" id="addContactreason" value=""></input>
+            <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="addContact();">
+                            addContact
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：deleteContact</span>
+             <div class="pad">username:</div><input class="textbox" type="text" id="deleteContactusername" value="mikuser2"></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="deleteContact();">
+                            deleteContact
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：acceptInvitation</span>
+             <div class="pad">username:</div><input class="textbox" type="text" id="acceptInvitationusername" value="mikuser2"></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="acceptInvitation();">
+                            acceptInvitation
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：refuseInvitation</span>
+             <div class="pad">username:</div><input class="textbox" type="text" id="refuseInvitationusername" value="mikuser2"></input>
+             <div class="pad">reason:</div><input class="textbox" type="text" id="refuseInvitationreason" value=""></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="refuseInvitation();">
+                            refuseInvitation
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：getBlackListUsernames</span>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="getBlackListUsernames();">
+                            getBlackListUsernames
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：addUserToBlackList</span>
+             <div class="pad">username:</div><input class="textbox" type="text" id="addUserToBlackListusername" value="mikuser2"></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="getBlackListUsernames();">
+                            getBlackListUsernames
+                        </div>
+                    </div>
+                </div>
+
+             <br><br><span>方法：deleteUserFromBlackList</span>
+             <div class="pad">username:</div><input class="textbox" type="text" id="deleteUserFromBlackListusername" value="mikuser2"></input>
+             <div class="ub ub-hor ub-pc" id="height">
+                    <div class="uin  ub-f1 ">
+                        <div class="ub btn bc-text-head bc-btn ub-ac ub-pc " onclick="deleteUserFromBlackList();">
+                            deleteUserFromBlackList
+                        </div>
+                    </div>
+                </div>
+        <div class="pad">======回调记录==========</div>
+        <div id='TestCallBack'>原本内容</div>
+        <div id='TestData'>原本内容</div>
+
+            </div>
+            <!-- </div> -->
+            <!--content结束-->
+        </div>
+        <script src="../../../js/appcan.js"></script>
+        <script src="../../../js/appcan.control.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+             uexWindow.subscribeChannelNotification("1", "easemobDemoGlobalPost");
+            uexWindow.easemobDemoGlobalPost=globalPost;
+        });
+ //[4.6]
+    function getContactUserNames(){
+        uexEasemob.getContactUserNames(function(data){
+                                       alert("callback:"+JSON.stringify(data));
+                                       });
+    }
+
+    //[4.8]
+    function addContact(){
+        var toAddUsername = document.getElementById("addContacttoAddUsername").value;
+        var reason = document.getElementById("addContactreason").value;
+        uexEasemob.addContact('{"toAddUsername":"'+toAddUsername+'","reason":"'+reason+'"}');
+//alert("addContact方法已执行");
+    }
+
+    //[4.9]
+    function deleteContact(){
+        var username = document.getElementById("deleteContactusername").value;
+        uexEasemob.deleteContact('{"username":"'+username+'"}');
+    }
+
+    //[4.10]
+    function acceptInvitation(){
+        var username = document.getElementById("acceptInvitationusername").value;
+        uexEasemob.acceptInvitation('{"username":"'+username+'"}');
+    }
+
+    //[4.11]
+    function refuseInvitation(){
+        var username = document.getElementById("refuseInvitationusername").value;
+        var reason = document.getElementById("refuseInvitationreason").value;
+        uexEasemob.refuseInvitation('{"username":"'+username+'","reason":"'+reason+'"}');
+        //alert("refuseInvitation方法已执行");
+    }
+
+    //[4.12]
+    function getBlackListUsernames(){
+        uexEasemob.getBlackListUsernames(function(data){
+                                         alert("callback:"+JSON.stringify(data));
+                                         });
+    }
+
+    //[4.14]
+    function addUserToBlackList(){
+        var username = document.getElementById("addUserToBlackListusername").value;
+        uexEasemob.addUserToBlackList('{"username":"'+username+'"}');
+    }
+
+    //[4.15]
+    function deleteUserFromBlackList(){
+        var username = document.getElementById("deleteUserFromBlackListusername").value;
+        uexEasemob.deleteUserFromBlackList('{"username":"'+username+'"}');
+        alert("deleteUserFromBlackList方法已执行");
+    }
+
+    </script>
+</html>

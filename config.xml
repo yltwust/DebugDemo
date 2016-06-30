@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<widget widgetId="" pid="" appId="dss140843969510039" channelCode="0000" version="00.00.0000" viewmode="application" width="320" height="480" sreensize="4.5"> 
+  <name>ming</name>  
+  <description/>  
+  <author email=""/>  
+  <icon src="icon.png"/>  
+  <license href=""/>  
+  <content src="dev4/system/uexBackground/api.html" encoding="utf-8"/>  
+  <updateurl/>  
+  <logserverip/>  
+  <showmyspace>false</showmyspace>  
+  <obfuscation>false</obfuscation>  
+  <bgcolor>#fefefe</bgcolor>  
+  <orientation>15</orientation> 
+  <config desc="backgroundConfig" type="AUTHORITY">
+        <permission flag="2" info="backgroundMode" platform="iOS"/>
+    </config>
+</widget>
